@@ -1,0 +1,540 @@
+/* Основные стили */
+@font-face {
+    font-family: "FuturaCyrillicBook";
+    src: url("FuturaCyrillicBook.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "FuturaCyrillicHeavy";
+    src: url("FuturaCyrillicHeavy.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "FuturaCyrillicMedium";
+    src: url("FuturaCyrillicMedium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #141314;
+    color: #e6e1e3;
+    font-family: "FuturaCyrillicBook", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 80px); /* Учитываем ширину меню */
+    flex: 1;
+    margin-left: 80px; /* Отступ для навигационного меню */
+}
+
+/* Стили для hero изображения */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #e6e1e3;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: "FuturaCyrillicHeavy", sans-serif;
+}
+
+/* Контейнер для двух больших блоков */
+.large-blocks-container {
+    width: 1760px;
+    height: 550px;
+    margin: 0 auto 20px;
+    display: flex;
+}
+
+.large-blocks {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.custom-block {
+    background-color: #1c1b1d;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-block-content {
+    text-align: left;
+}
+
+.custom-block h2 {
+    font-size: 36px;
+    color: #e6e1e3;
+    margin-bottom: 10px;
+}
+
+.custom-block p {
+    font-size: 24px;
+    color: #e6e1e3;
+    margin-bottom: 20px;
+}
+
+.custom-button {
+    display: inline-block;
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color .3s;
+}
+
+.custom-button:hover {
+    background-color: #3700b3;
+}
+
+.custom-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Стили для главного контента */
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    flex: 1;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 32px;
+    color: #e6e1e3;
+}
+
+.articles-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.article {
+    background-color: #1c1b1d;
+    border-radius: 20px;
+    padding: 20px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.article .date {
+    color: #c1bdbd;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e6e1e3;
+}
+
+.article p {
+    font-size: 18px;
+    color: #e6e1e3;
+    margin-bottom: 20px;
+}
+
+/* Новый стиль для одинакового размера картинок */
+.article-image {
+    width: 100%;
+    height: 250px; /* Устанавливаем фиксированную высоту */
+    object-fit: cover; /* Обеспечиваем обрезку изображения, чтобы оно соответствовало заданным размерам */
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+/* Стили для drawer */
+.drawer {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1c1b1d;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px; /* Смещение от верха для начала после больших блоков */
+}
+
+.drawer a {
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 12px;
+    color: #e6e1e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    text-align: center;
+    width: 80px;
+    height: 60px;
+}
+
+.drawer a:hover {
+    background-color: #575757;
+}
+
+.drawer .icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #1c1b1d;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #e6e1e3;
+    font-size: 16px;
+}
+
+.company-info {
+    font-size: 14px;
+    color: #e6e1e3;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .large-blocks {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .custom-block, .custom-video {
+        height: 300px;
+        width: 100%;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .hero-text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 0; /* Убираем отступ на малых экранах */
+        margin-left: 0;
+    }
+
+    .drawer {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .drawer a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .articles {
+        width: 100%;
+    }
+
+    .article, .custom-block {
+        width: 90%;
+    }
+
+    .custom-video {
+        height: auto;
+    }
+
+    .hero img {
+        height: 200px;
+    }
+
+    .hero-text {
+        font-size: 24px;
+    }
+
+    .large-blocks-container {
+        height: auto;
+    }
+
+    .custom-block, .custom-video {
+        height: auto;
+        width: 90%;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article {
+        width: 100%;
+    }
+
+    .pagination {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .pagination a {
+        margin: 2px 0;
+        padding: 8px 10px;
+    }
+}
+
+#main-menu li a.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Стили для подменю */
+#sub-menu {
+    margin-top: 20px;
+}
+
+#sub-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#sub-menu ul li a {
+    text-decoration: none;
+    color: #e6e1e3;
+    font-size: 16px;
+    background-color: #1c1b1d;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#sub-menu ul li a:hover {
+    background-color: #6200ea;
+}
+
+/* Основные стили для страницы гайдов */
+.guides-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.guides-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guides-header h1 {
+    font-size: 36px;
+    color: #e6e1e3;
+}
+
+.guides-header p {
+    font-size: 18px;
+    color: #c1bdbd;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.filters select {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.guides-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.guide-card {
+    background-color: #1c1b1d;
+    border-radius: 20px;
+    padding: 20px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.guide-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.guide-content {
+    text-align: left;
+}
+
+.guide-content h2 {
+    font-size: 24px;
+    color: #e6e1e3;
+    margin-bottom: 10px;
+}
+
+.guide-content p {
+    font-size: 18px;
+    color: #e6e1e3;
+    margin-bottom: 10px;
+}
+
+.guide-date {
+    font-size: 14px;
+    color: #c1bdbd;
+    margin-bottom: 20px;
+}
+
+.guide-button {
+    display: inline-block;
+    background-color: #6200ea;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color .3s;
+}
+
+.guide-button:hover {
+    background-color: #3700b3;
+}
+
+.popular-guides {
+    margin-top: 40px;
+}
+
+.popular-guides h2 {
+    font-size: 28px;
+    color: #e6e1e3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #1c1b1d;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #e6e1e3;
+    font-size: 16px;
+}
+
+.company-info {
+    font-size: 14px;
+    color: #e6e1e3;
+}
+

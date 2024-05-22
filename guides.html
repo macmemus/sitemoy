@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гайды</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="guides-container">
+
+        <!-- Заголовок страницы -->
+        <header class="guides-header">
+            <h1>Гайды</h1>
+            <p>Откройте для себя полезные материалы и руководства по различным темам.</p>
+        </header>
+
+        <!-- Поиск и фильтры -->
+        <div class="search-filters">
+            <input type="text" placeholder="Поиск гайдов..." class="search-input">
+            <div class="filters">
+                <select class="filter-category">
+                    <option value="">Категория</option>
+                    <option value="programming">Программирование</option>
+                    <option value="design">Дизайн</option>
+                    <option value="marketing">Маркетинг</option>
+                </select>
+                <select class="filter-difficulty">
+                    <option value="">Сложность</option>
+                    <option value="beginner">Начинающий</option>
+                    <option value="intermediate">Средний</option>
+                    <option value="advanced">Продвинутый</option>
+                </select>
+                <select class="filter-date">
+                    <option value="">Дата</option>
+                    <option value="newest">Новые</option>
+                    <option value="oldest">Старые</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Список гайдов -->
+        <div class="guides-list">
+            <div class="guide-card">
+                <img src="guide1.jpg" alt="Guide Image" class="guide-image">
+                <div class="guide-content">
+                    <h2>Название гайда</h2>
+                    <p>Краткое описание гайда. Узнайте, как ...</p>
+                    <span class="guide-date">15 мая 2024</span>
+                    <a href="guide1.html" class="guide-button">Читать дальше</a>
+                </div>
+            </div>
+            <!-- Дополнительные карточки гайдов -->
+            <div class="guide-card">
+                <img src="guide2.jpg" alt="Guide Image" class="guide-image">
+                <div class="guide-content">
+                    <h2>Название гайда</h2>
+                    <p>Краткое описание гайда. Узнайте, как ...</p>
+                    <span class="guide-date">12 мая 2024</span>
+                    <a href="guide2.html" class="guide-button">Читать дальше</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Популярные гайды -->
+        <div class="popular-guides">
+            <h2>Популярные гайды</h2>
+            <div class="guides-list">
+                <div class="guide-card">
+                    <img src="popular1.jpg" alt="Guide Image" class="guide-image">
+                    <div class="guide-content">
+                        <h2>Название популярного гайда</h2>
+                        <p>Краткое описание популярного гайда...</p>
+                        <span class="guide-date">10 мая 2024</span>
+                        <a href="popular1.html" class="guide-button">Читать дальше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-content">
+                <img src="logo.png" alt="Логотип" class="logo">
+                <div class="links">
+                    <a href="#">О нас</a>
+                    <a href="#">Галерея</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <div class="company-info">
+                    ООО "Организация" © 2020
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
