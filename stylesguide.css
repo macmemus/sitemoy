@@ -142,3 +142,175 @@
     font-size: 14px;
     color: #e6e1e3;
 }
+
+
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.site-header {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.guide-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px; /* Ограничьте максимальную ширину контейнера */
+    margin-right: auto;
+    margin-left: auto; /* Центрирование контейнера */
+    padding: 20px;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.guide-header h1 {
+    font-size: 84px;
+    color: #202124;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.guide-header .guide-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.guide-meta {
+    font-size: 18px;
+    color: #5F6368;
+    margin-bottom: 40px;
+}
+
+.guide-content {
+    line-height: 1.8; /* Увеличиваем межстрочное расстояние для улучшения читаемости */
+}
+
+.guide-section h2 {
+    font-size: 40px;
+    color: #202124;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.guide-section h3 {
+    font-size: 30px;
+    color: #202124;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.guide-section p {
+    font-size: 22px;
+    color: #3C4043;
+    margin-bottom: 20px;
+    font-weight: 300; /* Легкий шрифт для улучшенной читаемости */
+}
+
+.code-snippet {
+    background-color: #F1F3F4;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: "Roboto Flex", monospace;
+    color: #202124;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    font-size: 18px; /* Уменьшенный размер шрифта для кода */
+}
+
+.guide-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+.guide-button {
+    display: inline-block;
+    background-color: #1E88E5;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color .3s;
+    text-align: center;
+}
+
+.guide-button:hover {
+    background-color: #1565C0;
+}
+
+/* Футер */
+.footer {
+    background-color: #1C1B1D;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto; /* Для фиксации футера внизу */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #E6E1E3;
+    font-size: 16px;
+}
+
+.company-info {
+    font-size: 14px;
+    color: #E6E1E3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .guide-header h1 {
+        font-size: 60px;
+    }
+
+    .guide-header p {
+        font-size: 14px;
+    }
+
+    .guide-section h2 {
+        font-size: 30px;
+    }
+
+    .guide-section h3 {
+        font-size: 24px;
+    }
+
+    .guide-section p {
+        font-size: 18px;
+    }
+}
