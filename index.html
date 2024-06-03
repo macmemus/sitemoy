@@ -8,35 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-
-        <div class="hero">
-            <img src="img/hero-image.jpg" alt="Hero Image">
-            <div class="overlay"></div>
-            <div class="hero-text">
-                AI - Это просто!
-            </div>
-        </div>
-
-        <!-- Контейнер для двух больших блоков -->
-        <div class="large-blocks-container">
-            <div class="large-blocks">
-                <div class="custom-block">
-                    <div class="custom-block-content">
-                        <h2>AI в преподавании: Новые горизонты</h2>
-                        <p>Преподаватели могут использовать AI для управления учебным процессом, анализа успеваемости и персонализации обучения. Откройте для себя, как технологии AI помогают сделать обучение более эффективным.  </p>
-                        <a href="guides.html" class="custom-button">Узнать больше</a>
-                    </div>
-                </div>
-                <div class="custom-block">
-                    <video class="custom-video" autoplay loop muted>
-                        <source src="video/5680034.mp4" type="video/mp4">
-                        Ваш браузер не поддерживает данное разрешение.
-                    </video>
-                </div>
-            </div>
-        </div>
-
+    <div class="page-wrapper"> <!-- Добавленный контейнер -->
         <!-- Навигационный drawer -->
         <div id="drawer" class="drawer">
             <a href="index.html">
@@ -47,75 +19,105 @@
             </a>
         </div>
 
-        <div class="main-content">
-            <h2 class="section-title">Как использовать AI в образовательном процессе?</h2>
+        <div class="container">
+            <div class="hero">
+                <img src="img/hero-image.jpg" alt="Hero Image">
+                <div class="overlay"></div>
+                <div class="hero-text">
+                    AI - Это просто!
+                </div>
+            </div>
+
+            <!-- Контейнер для двух больших блоков -->
+            <div class="large-blocks-container">
+                <div class="large-blocks">
+                    <div class="custom-block">
+                        <div class="custom-block-content">
+                            <h2>AI в преподавании: Новые горизонты</h2>
+                            <p>Преподаватели могут использовать AI для управления учебным процессом, анализа успеваемости и персонализации обучения. Откройте для себя, как технологии AI помогают сделать обучение более эффективным.  </p>
+                            <a href="guides.html" class="custom-button">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="custom-block">
+                        <video class="custom-video" autoplay loop muted>
+                            <source src="video/5680034.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает данное разрешение.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <h2 class="section-title">Как использовать AI в образовательном процессе?</h2>
+                <div class="articles-row">
+                    <div class="article" data-article-id="1">
+                        <div class="article-content">
+                            <span class="date">28 мая 2024</span>
+                            <h2 class="expandable">Персонализированное обучение с помощью AI</h2>
+                            <p>Искусственный интеллект позволяет создавать персонализированные образовательные программы, которые учитывают индивидуальные потребности и способности каждого ученика. Это помогает улучшить результаты обучения и мотивировать студентов к самостоятельной работе.</p>
+                        </div>
+                        <img src="img/getty.jpg" alt="Article Image" class="article-image">
+                    </div>
+                    <div class="article" data-article-id="2">
+                        <div class="article-content">
+                            <span class="date">20 мая 2024</span>
+                            <h2 class="expandable">Использование AI для оценки знаний</h2>
+                            <p>Системы на базе искусственного интеллекта могут быстро и точно оценивать знания студентов, освобождая преподавателей от рутинных задач и позволяя им сосредоточиться на более значимых аспектах преподавания.</p>
+                        </div>
+                        <img src="img/1589462052803.jpg" alt="Article Image" class="article-image">
+                    </div>
+                    <div class="article" data-article-id="3">
+                        <div class="article-content">
+                            <span class="date">15 мая 2024</span>
+                            <h2 class="expandable">AI-технологии в создании учебных материалов</h2>
+                            <p>Искусственный интеллект используется для создания интерактивных учебных материалов, таких как виртуальные лаборатории и симуляции, которые делают обучение более увлекательным и эффективным.</p>
+                        </div>
+                        <img src="img/education-main-1600.jpg" alt="Article Image" class="article-image">
+                    </div>
+                </div>
+            </div>
+
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-button">&times;</span>
+                    <h2></h2>
+                    <img src="" alt="Popup Image" class="popup-image">
+                    <p></p>
+                    <p></p>
+                    <!-- Button will be added dynamically -->
+                </div>
+            </div>
+
+            <!-- Раздел "Как использовать AI?" -->
+            <h2 class="section-title">Как использовать AI?</h2>
             <div class="articles-row">
-                <div class="article" data-article-id="1">
-                    <div class="article-content">
-                        <span class="date">28 мая 2024</span>
-                        <h2 class="expandable">Персонализированное обучение с помощью AI</h2>
-                        <p>Искусственный интеллект позволяет создавать персонализированные образовательные программы, которые учитывают индивидуальные потребности и способности каждого ученика. Это помогает улучшить результаты обучения и мотивировать студентов к самостоятельной работе.</p>
-                    </div>
-                    <img src="img/getty.jpg" alt="Article Image" class="article-image">
-                </div>
-                <div class="article" data-article-id="2">
-                    <div class="article-content">
-                        <span class="date">20 мая 2024</span>
-                        <h2 class="expandable">Использование AI для оценки знаний</h2>
-                        <p>Системы на базе искусственного интеллекта могут быстро и точно оценивать знания студентов, освобождая преподавателей от рутинных задач и позволяя им сосредоточиться на более значимых аспектах преподавания.</p>
-                    </div>
-                    <img src="img/1589462052803.jpg" alt="Article Image" class="article-image">
-                </div>
-                <div class="article" data-article-id="3">
+                <div class="article" data-article-id="4">
                     <div class="article-content">
                         <span class="date">15 мая 2024</span>
-                        <h2 class="expandable">AI-технологии в создании учебных материалов</h2>
-                        <p>Искусственный интеллект используется для создания интерактивных учебных материалов, таких как виртуальные лаборатории и симуляции, которые делают обучение более увлекательным и эффективным.</p>
+                        <h2>Использование AI в обучении программированию</h2>
+                        <p>AI может помочь студентам учиться программированию, предоставляя советы и автоматическую проверку кода.</p>
                     </div>
-                    <img src="img/education-main-1600.jpg" alt="Article Image" class="article-image">
+                    <img src="img/949652688.jpg" alt="Article Image" class="article-image">
+                </div>
+                <div class="article" data-article-id="5">
+                    <div class="article-content">
+                        <span class="date">12 мая 2024</span>
+                        <h2>AI в языковом обучении</h2>
+                        <p>Искусственный интеллект используется для создания адаптивных языковых курсов, которые подстраиваются под уровень знаний и прогресс ученика. AI может также помочь в изучении произношения, грамматики и словарного запаса через интерактивные упражнения и обратную связь.</p>
+                    </div>
+                    <img src="img/1643625790132.jpg" alt="Article Image" class="article-image">
+                </div>
+                <div class="article" data-article-id="6">
+                    <div class="article-content">
+                        <span class="date">13 дек 2020</span>
+                        <h2>AI в искусстве и дизайне</h2>
+                        <p>AI для создания новых форм искусства и дизайна, предлагая инновационные инструменты для художников и дизайнеров. AI может генерировать идеи, создавать произведения искусства и помогать в процессе творчества.</p>
+                    </div>
+                    <img src="img/0_Ytj0SnjPnK4Ozgol.png" alt="Article Image" class="article-image">
                 </div>
             </div>
         </div>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <span class="close-button">&times;</span>
-                <h2></h2>
-                <img src="" alt="Popup Image" class="popup-image">
-                <p></p>
-                <p></p>
-                <!-- Button will be added dynamically -->
-            </div>
-        </div>
-
-        <!-- Раздел "Как использовать AI?" -->
-        <h2 class="section-title">Как использовать AI?</h2>
-        <div class="articles-row">
-            <div class="article" data-article-id="4">
-                <div class="article-content">
-                    <span class="date">15 мая 2024</span>
-                    <h2>Использование AI в обучении программированию</h2>
-                    <p>AI может помочь студентам учиться программированию, предоставляя советы и автоматическую проверку кода.</p>
-                </div>
-                <img src="img/949652688.jpg" alt="Article Image" class="article-image">
-            </div>
-            <div class="article" data-article-id="5">
-                <div class="article-content">
-                    <span class="date">12 мая 2024</span>
-                    <h2>AI в языковом обучении</h2>
-                    <p>Искусственный интеллект используется для создания адаптивных языковых курсов, которые подстраиваются под уровень знаний и прогресс ученика. AI может также помочь в изучении произношения, грамматики и словарного запаса через интерактивные упражнения и обратную связь.</p>
-                </div>
-                <img src="img/1643625790132.jpg" alt="Article Image" class="article-image">
-            </div>
-            <div class="article" data-article-id="6">
-                <div class="article-content">
-                    <span class="date">13 дек 2020</span>
-                    <h2>AI в искусстве и дизайне</h2>
-                    <p>AI для создания новых форм искусства и дизайна, предлагая инновационные инструменты для художников и дизайнеров. AI может генерировать идеи, создавать произведения искусства и помогать в процессе творчества.</p>
-                </div>
-                <img src="img/0_Ytj0SnjPnK4Ozgol.png" alt="Article Image" class="article-image">
-            </div>
-        </div>
-    </div>
+    </div> <!-- Закрытие добавленного контейнера -->
 
     <footer>
         <div class="footer-content">
@@ -124,6 +126,5 @@
             </div>             
         </div>
     </footer>
-
 </body>
 </html>

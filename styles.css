@@ -27,8 +27,11 @@ body, html {
     background-color: #141314;
     color: #e6e1e3;
     font-family: "FuturaCyrillicBook", sans-serif;
+    height: 100%;
+}
+
+.page-wrapper {
     display: flex;
-    flex-direction: column;
     height: 100%;
 }
 
@@ -38,14 +41,14 @@ body, html {
     text-align: center;
     color: #e6e1e3;
     margin-bottom: 20px;
-    overflow: hidden; /* Добавлено для удаления полоски */
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     height: 490px;
     object-fit: cover;
-    display: block; /* Добавлено для удаления полоски */
+    display: block;
 }
 
 .overlay {
@@ -54,7 +57,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-text {
@@ -185,8 +188,8 @@ body, html {
 /* Новый стиль для одинакового размера картинок */
 .article-image {
     width: 100%;
-    height: 250px; /* Устанавливаем фиксированную высоту */
-    object-fit: cover; /* Обеспечиваем обрезку изображения, чтобы оно соответствовало заданным размерам */
+    height: 250px;
+    object-fit: cover;
     border-radius: 20px;
     align-self: flex-end;
 }
@@ -195,16 +198,14 @@ body, html {
 .drawer {
     height: 100%;
     width: 80px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
     background-color: #1c1b1d;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px; /* Смещение от верха для начала после больших блоков */
+    padding-top: 120px;
+    position: relative; /* Обновлено для размещения в одном слое */
+    z-index: 1; /* Обновлено для правильного отображения */
 }
 
 .drawer a {
@@ -232,20 +233,21 @@ body, html {
 }
 
 .container {
-    margin-bottom: 40px; /* Добавляем отступ снизу */
+    flex: 1;
+    padding-bottom: 40px;
 }
 
 footer {
     background-color: #1c1b1d;
     padding: 20px;
     text-align: center;
-    margin-top: 20px; /* Добавляем верхний отступ для футера */
+    margin-top: 20px;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
-   	align-items: center;
+    align-items: center;
     justify-content: space-around;
     height: 100%;
 }
@@ -289,11 +291,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding-left: 0; /* Убираем отступ на малых экранах */
-        margin-left: 0;
-    }
-
     .drawer {
         position: relative;
         width: 100%;
@@ -305,6 +302,10 @@ footer {
     .drawer a {
         padding: 8px;
         font-size: 14px;
+    }
+
+    .container {
+        margin-left: 0;
     }
 
     .main-content {
@@ -368,21 +369,21 @@ footer {
     }
 
     .custom-block, .custom-video {
-        width: 48%; 
+        width: 48%;
     }
 
     .large-blocks {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
     }
 }
 
 @media screen and (max-width: 1400px) {
     .custom-block h2 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     .custom-block p {
-        font-size: 18px; 
+        font-size: 18px;
     }
 }
 
@@ -417,26 +418,6 @@ footer {
 
 #sub-menu ul li a:hover {
     background-color: #6200ea;
-}
-
-/* Основные стили */
-@font-face {
-    font-family: "FuturaCyrillicBook";
-    src: url("FuturaCyrillicBook.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background-color: #141314;
-    color: #e6e1e3;
-    font-family: "FuturaCyrillicBook", sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
 .article {
