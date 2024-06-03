@@ -338,7 +338,7 @@ footer {
         height: auto;
     }
 
-    .custom-block, .custom-video {
+    .custom-block, .custom-image {
         height: 300px;
         width: 100%;
     }
@@ -392,17 +392,19 @@ footer {
     }
 }
 
+
 @media screen and (max-width: 1800px) {
     .large-blocks-container {
         width: 100%;
     }
 
-    .custom-block, .custom-video {
-        width: 48%;
+    .custom-block, .custom-image {
+        width: 100%;
     }
 
     .large-blocks {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
