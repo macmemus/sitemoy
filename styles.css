@@ -32,19 +32,17 @@ body, html {
     flex-direction: column;
 }
 
-/* Ensure full height for page-wrapper */
 .page-wrapper {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-/* Ensure container takes the remaining space */
 .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-left: 80px; /* Add a left margin equal to the drawer's width */
+    margin-left: 80px; 
     padding-bottom: 40px;
 }
 
@@ -87,13 +85,12 @@ body, html {
     margin-bottom: 5px;
 }
 
-/* Ensure footer stays at the bottom */
 footer {
     background-color: #1c1b1d;
     padding: 20px;
     text-align: center;
     margin-top: auto;
-    margin-left: 80px; /* Add a left margin equal to the drawer's width */
+    margin-left: 80px;
 }
 
 .footer-content {
@@ -185,6 +182,19 @@ footer {
     text-align: left;
 }
 
+.custom-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.image-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .custom-block h2 {
     font-size: 36px;
     color: #e6e1e3;
@@ -212,12 +222,6 @@ footer {
     background-color: #3700b3;
 }
 
-.custom-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    object-fit: cover;
-}
 
 /* Стили для главного контента */
 .main-content {
@@ -331,16 +335,377 @@ footer {
     cursor: pointer;
 }
 
-/* Адаптивность */
-@media (max-width: 1200px) {
-    .large-blocks {
-        flex-direction: column;
+@media (min-width: 1200px) and (max-width: 1439px) {
+    .container {
+        margin-left: 60px; 
+        padding-bottom: 30px;
+    }
+
+    .drawer {
+        width: 60px;
+        padding-top: 100px;
+    }
+
+    .drawer a {
+        font-size: 10px;
+        width: 60px;
+        height: 50px;
+    }
+
+    .drawer .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero img {
+        height: 420px;
+    }
+
+    .hero-text {
+        font-size: 40px;
+    }
+
+    .large-blocks-container {
+        width: 100%;
         height: auto;
     }
 
-    .custom-block, .custom-image {
-        height: 300px;
+    .large-blocks {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .custom-block,
+    .custom-block.image-block {
+        height: auto;
+        flex: none;
+    }
+
+    .custom-block-content {
+        text-align: left;
+    }
+
+    .custom-block h2 {
+        font-size: 30px;
+    }
+
+    .custom-block p {
+        font-size: 20px;
+    }
+
+    .custom-button {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+
+    .custom-image {
         width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .section-title {
+        margin: 30px 0 15px;
+        font-size: 28px;
+    }
+
+    .article {
+        width: 100%;
+        max-width: 450px;
+        padding: 15px;
+    }
+
+    .article h2 {
+        font-size: 22px;
+    }
+
+    .article p {
+        font-size: 16px;
+    }
+
+    .article-image {
+        height: 200px;
+    }
+
+    .popup-content {
+        max-width: 700px;
+    }
+
+    .popup-content h2 {
+        font-size: 28px;
+    }
+
+    .popup-content p {
+        font-size: 16px;
+    }
+
+    .close-button {
+        font-size: 20px;
+    }
+
+    #sub-menu ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        margin-left: 50px; 
+        padding-bottom: 20px;
+    }
+
+    .drawer {
+        width: 50px;
+        padding-top: 80px;
+    }
+
+    .drawer a {
+        font-size: 9px;
+        width: 50px;
+        height: 45px;
+    }
+
+    .drawer .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero img {
+        height: 380px;
+    }
+
+    .hero-text {
+        font-size: 35px;
+    }
+
+    .large-blocks-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .large-blocks {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .custom-block,
+    .custom-block.image-block {
+        height: auto;
+        flex: none;
+    }
+
+    .custom-block-content {
+        text-align: left;
+    }
+
+    .custom-block h2 {
+        font-size: 28px;
+    }
+
+    .custom-block p {
+        font-size: 18px;
+    }
+
+    .custom-button {
+        padding: 8px 14px;
+        font-size: 16px;
+    }
+
+    .custom-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .section-title {
+        margin: 25px 0 10px;
+        font-size: 26px;
+    }
+
+    .article {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    .article h2 {
+        font-size: 20px;
+    }
+
+    .article p {
+        font-size: 16px;
+    }
+
+    .article-image {
+        height: 180px;
+    }
+
+    .popup-content {
+        max-width: 650px;
+    }
+
+    .popup-content h2 {
+        font-size: 26px;
+    }
+
+    .popup-content p {
+        font-size: 16px;
+    }
+
+    .close-button {
+        font-size: 18px;
+    }
+
+    #sub-menu ul li a {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        margin-left: 40px; 
+        padding-bottom: 15px;
+    }
+
+    .drawer {
+        width: 40px;
+        padding-top: 60px;
+    }
+
+    .drawer a {
+        font-size: 8px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .drawer .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hero img {
+        height: 350px;
+    }
+
+    .hero-text {
+        font-size: 30px;
+    }
+
+    .large-blocks-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .large-blocks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .custom-block,
+    .custom-block.image-block {
+        height: auto;
+        flex: none;
+    }
+
+    .custom-block-content {
+        text-align: left;
+    }
+
+    .custom-block h2 {
+        font-size: 26px;
+    }
+
+    .custom-block p {
+        font-size: 16px;
+    }
+
+    .custom-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .custom-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .section-title {
+        margin: 20px 0 10px;
+        font-size: 24px;
+    }
+
+    .article {
+        width: 100%;
+        max-width: 350px;
+        padding: 10px;
+    }
+
+    .article h2 {
+        font-size: 18px;
+    }
+
+    .article p {
+        font-size: 14px;
+    }
+
+    .article-image {
+        height: 150px;
+    }
+
+    .popup-content {
+        max-width: 600px;
+    }
+
+    .popup-content h2 {
+        font-size: 24px;
+    }
+
+    .popup-content p {
+        font-size: 14px;
+    }
+
+    .close-button {
+        font-size: 16px;
+    }
+
+    #sub-menu ul li a {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .container {
+        margin-left: 0;
+        padding-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    .drawer {
+        width: 100%;
+        height: 50px;
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .drawer a {
+        font-size: 8px;
+        width: auto;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .drawer .icon {
+        width: 16px;
+        height: 16px;
     }
 
     .hero img {
@@ -348,73 +713,234 @@ footer {
     }
 
     .hero-text {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .drawer {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        padding-top: 20px;
-        height: auto;
+        font-size: 24px;
+        padding: 0 10px;
     }
 
-    .drawer a {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .container {
-        margin-left: 0;
-    }
-
-    footer {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .article {
-        width: 100%;
-    }
-
-    .pagination {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .pagination a {
-        margin: 2px 0;
-        padding: 8px 10px;
-    }
-}
-
-
-@media screen and (max-width: 1800px) {
     .large-blocks-container {
         width: 100%;
-    }
-
-    .custom-block, .custom-image {
-        width: 100%;
+        height: auto;
     }
 
     .large-blocks {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
+        padding: 0 10px;
     }
-}
 
-@media screen and (max-width: 1400px) {
+    .custom-block,
+    .custom-block.image-block {
+        height: auto;
+        flex: none;
+    }
+
+    .custom-block-content {
+        text-align: left;
+    }
+
     .custom-block h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .custom-block p {
+        font-size: 14px;
+    }
+
+    .custom-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .custom-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .section-title {
+        margin: 20px 0 10px;
+        font-size: 22px;
+    }
+
+    .articles-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .article h2 {
+        font-size: 16px;
+    }
+
+    .article p {
+        font-size: 12px;
+    }
+
+    .article-image {
+        height: 150px;
+    }
+
+    .popup-content {
+        max-width: 90%;
+    }
+
+    .popup-content h2 {
+        font-size: 22px;
+    }
+
+    .popup-content p {
+        font-size: 12px;
+    }
+
+    .close-button {
+        font-size: 14px;
+    }
+
+    #sub-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sub-menu ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #sub-menu ul li a {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    footer {
+        margin-left: 0;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        margin-left: 100px; 
+        padding-bottom: 50px;
+    }
+
+    .drawer {
+        width: 100px;
+        padding-top: 150px;
+    }
+
+    .drawer a {
+        font-size: 14px;
+        width: 100px;
+        height: 80px;
+    }
+
+    .drawer .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero img {
+        height: 550px;
+    }
+
+    .hero-text {
+        font-size: 60px;
+    }
+
+    .large-blocks-container {
+        width: 1960px;
+        height: 600px;
+    }
+
+    .large-blocks {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .custom-block,
+    .custom-block.image-block {
+        height: 100%;
+        flex: 1;
+    }
+
+    .custom-block-content {
+        text-align: left;
+    }
+
+    .custom-block h2 {
+        font-size: 40px;
+    }
+
+    .custom-block p {
+        font-size: 28px;
+    }
+
+    .custom-button {
+        padding: 12px 24px;
+        font-size: 24px;
+    }
+
+    .custom-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .section-title {
+        margin: 50px 0 25px;
+        font-size: 36px;
+    }
+
+    .articles-row {
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .article {
+        width: 600px;
+        padding: 20px;
+    }
+
+    .article h2 {
+        font-size: 28px;
+    }
+
+    .article p {
+        font-size: 22px;
+    }
+
+    .article-image {
+        height: 300px;
+    }
+
+    .popup-content {
+        max-width: 900px;
+    }
+
+    .popup-content h2 {
+        font-size: 36px;
+    }
+
+    .popup-content p {
+        font-size: 20px;
+    }
+
+    .close-button {
+        font-size: 28px;
+    }
+
+    #sub-menu ul li a {
         font-size: 18px;
+        padding: 12px;
     }
 }
 
