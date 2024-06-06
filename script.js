@@ -127,3 +127,62 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const chatInput = document.getElementById("chat-input");
+    const chatMessages = document.getElementById("chat-messages");
+    const sendButton = document.getElementById("send-button");
+
+    if (!chatInput || !chatMessages || !sendButton) {
+        console.error("Не удалось найти один или несколько элементов.");
+        return;
+    }
+
+    async function sendMessage() {
+        const message = chatInput.value;
+        if (!message) return;
+
+        console.log("Отправка сообщения:", message);
+
+        const userMessage = document.createElement("div");
+        userMessage.textContent = message;
+        userMessage.className = "user-message";
+        chatMessages.appendChild(userMessage);
+
+        chatInput.value = "";
+
+        try {
+            const response = await fetch('https://melo.pythonanywhere.com/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: message })
+            });
+
+            if (!response.ok) {
+                throw new Error(`Ошибка: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log("Данные от сервера:", data);
+
+            const botMessage = document.createElement("div");
+            botMessage.textContent = data.response;  // Изменено для использования 'response' вместо 'result'
+            botMessage.className = "bot-message";
+            chatMessages.appendChild(botMessage);
+        } catch (error) {
+            console.error("Ошибка при отправке сообщения:", error);
+        }
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    sendButton.addEventListener("click", sendMessage);
+    chatInput.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    });
+});
